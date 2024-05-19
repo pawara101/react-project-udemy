@@ -12,6 +12,14 @@ export const user = {
   // This exercise is just about practicing event handling
   // You'll learn how to add user authentication to React apps later in the course!
   function UserLogin() {
+
+    function ButtonClick(){
+        console.log("Button clicked");
+        user.loggedIn = true;
+        console.log(`User logged in ${user.loggedIn}`)
+        user.email= 'test@example.com';
+        user.password = "test@123"
+    }
     return (
       <div id="app">
         <h1>User Login</h1>
@@ -28,7 +36,7 @@ export const user = {
         </p>
   
         <p id="actions">
-          <button>Login</button>
+          <button onClick={ButtonClick}>Login</button>
         </p>
       </div>
     );
