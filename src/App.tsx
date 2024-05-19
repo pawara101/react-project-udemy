@@ -6,6 +6,10 @@ import CoreConcept from './components/CoreConcepts';
 import TabButtons from './components/TabButton';
 
 function App() {
+  //button click function
+  const handleSelect = (): void =>{
+    console.log("hello")
+  }
 const name: string = "Pawara"
   return (
     <>
@@ -21,7 +25,7 @@ const name: string = "Pawara"
         <section id='examples'>
           <h2>Examples</h2>
           <menu>
-            <TabButtons>hello</TabButtons>
+            <TabButtons onSelect={handleSelect}>hello</TabButtons>
           </menu>
          </section>
       </main>

@@ -5,15 +5,13 @@ interface TabButtonProps {
 
 interface Props {
   children: string;
+  onSelect: () => void; // 
 }
 
-export default function TabButtons({ children }: Props) {
+export default function TabButtons({ children, onSelect }: Props) {
 
-  //button click function
-const handleClick = (): void =>{
-  console.log("hello")
-}
+
   return (
-    <button onClick={ handleClick }>{children}</button>
+    <button onClick={ onSelect }>{children}</button>
   );
 }
