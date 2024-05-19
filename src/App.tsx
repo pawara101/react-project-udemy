@@ -21,7 +21,7 @@ const name: string = "Pawara"
         <section id='examples'>
           <h2>Examples</h2>
           <menu>
-            <TabButtons>Components</TabButtons>
+            <TabButtons label='Components-1' />
           </menu>
          </section>
       </main>
@@ -29,4 +29,4 @@ const name: string = "Pawara"
   )
 }
 
-export default App
+export default App;
