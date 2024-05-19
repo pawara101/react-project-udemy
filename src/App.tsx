@@ -1,7 +1,9 @@
 import './App.css'
+import './index.css'
 import { CORE_CONCEPTS } from './data';
 import Header from './components/Header';
 import CoreConcept from './components/CoreConcepts';
+import TabButtons from './components/TabButton';
 
 function App() {
 const name: string = "Pawara"
@@ -10,15 +12,18 @@ const name: string = "Pawara"
       <h1>hello {name} !!!</h1>
       <Header></Header>
       <main>
-        <section>
+        <section id='core-concepts'>
           <h2>Core Concepts</h2>
           <ul>
             <CoreConcept desc={''} {...CORE_CONCEPTS[0]} />
-            <CoreConcept desc={''} {...CORE_CONCEPTS[1]} />
-            <CoreConcept desc={''} {...CORE_CONCEPTS[2]} />
-            <CoreConcept desc={''} {...CORE_CONCEPTS[3]} />
           </ul>
         </section>
+        <section id='examples'>
+          <h2>Examples</h2>
+          <menu>
+            <TabButtons>Components</TabButtons>
+          </menu>
+         </section>
       </main>
     </>
   )
