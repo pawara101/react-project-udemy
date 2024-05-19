@@ -21,7 +21,7 @@ const name: string = "Pawara"
         <section id='examples'>
           <h2>Examples</h2>
           <menu>
-            <TabButtons label='Components-1' />
+            <TabButtons>hello</TabButtons>
           </menu>
          </section>
       </main>
