@@ -7,7 +7,7 @@ interface Props {
   children: string;
   onSelect: () => void; // 
 }
-
+// Here sending Prop 
 export default function TabButtons({ children, onSelect }: Props) {
 
 
