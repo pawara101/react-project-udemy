@@ -10,7 +10,7 @@ interface Props {
 // Here sending Prop 
 export default function TabButtons({ children, onSelect }: Props) {
 
-
+console.log("Tab button Component Rendered"); // this should be printed 1 time
   return (
     <button onClick={ onSelect }>{children}</button>
   );

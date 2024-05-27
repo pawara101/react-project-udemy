@@ -9,13 +9,17 @@ import UserLogin from './exercises/exercise_1';
 import { user } from './exercises/exercise_1';
 
 function App() {
+  let tabContent:string = "Please Click a Button";
+  const name: string = "Pawara"
+
     //button click function
-    const handleSelect = (selectedButton: void): void =>{
+    const handleSelect = (selectedButton: string): void =>{
       // selectedButton --> Button1,Button2,Button3
       // Pass handleSelect with an arrow function(anonymous function)
       console.log(selectedButton);
     }
-  const name: string = "Pawara"
+
+    console.log("App Component Rendered") // this should be printed 3 times
   return (
     <>
       <h1>hello {name} !!!</h1>
@@ -30,11 +34,11 @@ function App() {
         <section id='examples'>
           <h2>Examples</h2>
           <menu>
-            <TabButtons onSelect={()=>handleSelect("Components")}>Components</TabButtons>
-            <TabButtons onSelect={()=>handleSelect("Props")}>Props</TabButtons>
-            <TabButtons onSelect={()=>handleSelect("state")}>state</TabButtons>
+            <TabButtons onSelect={()=>handleSelect("Components")}>Components</TabButtons><br /><br />
+            <TabButtons onSelect={()=>handleSelect("Props")}>Props</TabButtons><br /><br />
+            <TabButtons onSelect={()=>handleSelect("state")}>state</TabButtons><br /><br />
           </menu>
-          Dynamic Content
+          { tabContent }
          </section>
       </main>
     </>
