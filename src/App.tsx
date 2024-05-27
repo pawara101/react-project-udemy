@@ -5,17 +5,21 @@ import Header from './components/Header';
 import CoreConcept from './components/CoreConcepts';
 import TabButtons from './components/TabButton';
 
-import UserLogin from './exercises/exercise_1';
-import { user } from './exercises/exercise_1';
+
+//to fix the Update issue use useState Hook
+import { useState } from 'react';
 
 function App() {
-  let tabContent:string = "Please Click a Button";
+//  const <stateArray> = useState("Please a Click a button");
+const [ selectedTopic,setSelectedTopic ] = useState("Please a Click a button");
+
+
   const name: string = "Pawara"
 
     //button click function
     const handleSelect = (selectedButton: string): void =>{
       // selectedButton --> Button1,Button2,Button3
-      // Pass handleSelect with an arrow function(anonymous function)
+      setSelectedTopic(selectedButton)
       console.log(selectedButton);
     }
 
@@ -38,7 +42,7 @@ function App() {
             <TabButtons onSelect={()=>handleSelect("Props")}>Props</TabButtons><br /><br />
             <TabButtons onSelect={()=>handleSelect("state")}>state</TabButtons><br /><br />
           </menu>
-          { tabContent }
+          { selectedTopic }
          </section>
       </main>
     </>
