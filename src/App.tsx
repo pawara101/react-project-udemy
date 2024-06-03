@@ -11,20 +11,20 @@ import { EXAMPLES } from './data';
 import { useState } from 'react';
 
 function App() {
-//  const <stateArray> = useState("Please a Click a button");
-const [ selectedTopic,setSelectedTopic ] = useState("components");
+  //  const <stateArray> = useState("Please a Click a button");
+  const [selectedTopic, setSelectedTopic] = useState();
 
 
   const name: string = "Pawara"
 
-    //button click function
-    const handleSelect = (selectedButton: string): void =>{
-      // selectedButton --> Button1,Button2,Button3
-      setSelectedTopic(selectedButton)
-      console.log(selectedButton);
-    }
+  //button click function
+  const handleSelect = (selectedButton: string): void => {
+    // selectedButton --> Button1,Button2,Button3
+    setSelectedTopic(selectedButton)
+    console.log(selectedButton);
+  }
 
-    console.log("App Component Rendered") // this should be printed 3 times
+  console.log("App Component Rendered") // this should be printed 3 times
   return (
     <>
       <h1>hello {name} !!!</h1>
@@ -39,17 +39,18 @@ const [ selectedTopic,setSelectedTopic ] = useState("components");
         <section id='examples'>
           <h2>Examples</h2>
           <menu>
-            <TabButtons onSelect={()=>handleSelect("components")}>Components</TabButtons><br /><br />
-            <TabButtons onSelect={()=>handleSelect("jsx")}>JSX</TabButtons><br /><br />
-            <TabButtons onSelect={()=>handleSelect("props")}>Props</TabButtons><br /><br />
-            <TabButtons onSelect={()=>handleSelect("state")}>State</TabButtons><br /><br />
+            <TabButtons onSelect={() => handleSelect("components")}>Components</TabButtons><br /><br />
+            <TabButtons onSelect={() => handleSelect("jsx")}>JSX</TabButtons><br /><br />
+            <TabButtons onSelect={() => handleSelect("props")}>Props</TabButtons><br /><br />
+            <TabButtons onSelect={() => handleSelect("state")}>State</TabButtons><br /><br />
           </menu>
-          <div id='tab-content'>
-            <h3>{ EXAMPLES[selectedTopic].title }</h3>
-            <p>{ EXAMPLES[selectedTopic].description }</p>
-            <code>{ EXAMPLES[selectedTopic].code }</code>
-          </div>
-         </section>
+          {!selectedTopic ? <p>Please Select a topic !!!</p> : <div id='tab-content'>
+            <h3>{EXAMPLES[selectedTopic].title}</h3>
+            <p>{EXAMPLES[selectedTopic].description}</p>
+            <code>{EXAMPLES[selectedTopic].code}</code>
+          </div>}
+
+        </section>
       </main>
     </>
   )
