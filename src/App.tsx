@@ -4,6 +4,7 @@ import { CORE_CONCEPTS } from './data';
 import Header from './components/Header';
 import CoreConcept from './components/CoreConcepts';
 import TabButtons from './components/TabButton';
+import { EXAMPLES } from './data';
 
 
 //to fix the Update issue use useState Hook
@@ -11,7 +12,7 @@ import { useState } from 'react';
 
 function App() {
 //  const <stateArray> = useState("Please a Click a button");
-const [ selectedTopic,setSelectedTopic ] = useState("Please a Click a button");
+const [ selectedTopic,setSelectedTopic ] = useState("components");
 
 
   const name: string = "Pawara"
@@ -38,11 +39,16 @@ const [ selectedTopic,setSelectedTopic ] = useState("Please a Click a button");
         <section id='examples'>
           <h2>Examples</h2>
           <menu>
-            <TabButtons onSelect={()=>handleSelect("Components")}>Components</TabButtons><br /><br />
-            <TabButtons onSelect={()=>handleSelect("Props")}>Props</TabButtons><br /><br />
-            <TabButtons onSelect={()=>handleSelect("state")}>state</TabButtons><br /><br />
+            <TabButtons onSelect={()=>handleSelect("components")}>Components</TabButtons><br /><br />
+            <TabButtons onSelect={()=>handleSelect("jsx")}>JSX</TabButtons><br /><br />
+            <TabButtons onSelect={()=>handleSelect("props")}>Props</TabButtons><br /><br />
+            <TabButtons onSelect={()=>handleSelect("state")}>State</TabButtons><br /><br />
           </menu>
-          { selectedTopic }
+          <div id='tab-content'>
+            <h3>{ EXAMPLES[selectedTopic].title }</h3>
+            <p>{ EXAMPLES[selectedTopic].description }</p>
+            <code>{ EXAMPLES[selectedTopic].code }</code>
+          </div>
          </section>
       </main>
     </>
