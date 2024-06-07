@@ -49,7 +49,6 @@ function App() {
             <p>{EXAMPLES[selectedTopic].description}</p>
             <code>{EXAMPLES[selectedTopic].code}</code>
           </div>}
-
         </section>
       </main>
     </>

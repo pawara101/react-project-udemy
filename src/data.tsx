@@ -1,7 +1,8 @@
-import componentsImg from './assets/diving-goggles-svgrepo-com.svg';
-import propsImg from './assets/users-young-svgrepo-com.svg';
-import jsxImg from './assets/diving-goggles-svgrepo-com.svg';
-import stateImg from './assets/diving-goggles-svgrepo-com.svg';
+import componentsImg from './assets/7423887_react_react native_icon.png';
+import propsImg from './assets/7423887_react_react native_icon.png';
+import jsxImg from './assets/7423887_react_react native_icon.png';
+import stateImg from './assets/7423887_react_react native_icon.png';
+
 export const CORE_CONCEPTS = [
     {
         image: componentsImg,
