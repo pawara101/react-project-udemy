@@ -25,6 +25,17 @@ function App() {
   }
 
   console.log("App Component Rendered") // this should be printed 3 times
+
+  let tabContent = <p>Please Select a topic !!!</p>;
+  if (selectedTopic) {
+    tabContent = (
+      <div id='tab-content'>
+            <h3>{EXAMPLES[selectedTopic].title}</h3>
+            <p>{EXAMPLES[selectedTopic].description}</p>
+            <code>{EXAMPLES[selectedTopic].code}</code>
+          </div>
+    );
+  }
   return (
     <>
       <h1>hello {name} !!!</h1>
@@ -44,11 +55,7 @@ function App() {
             <TabButtons onSelect={() => handleSelect("props")}>Props</TabButtons><br /><br />
             <TabButtons onSelect={() => handleSelect("state")}>State</TabButtons><br /><br />
           </menu>
-          {!selectedTopic ? <p>Please Select a topic !!!</p> : <div id='tab-content'>
-            <h3>{EXAMPLES[selectedTopic].title}</h3>
-            <p>{EXAMPLES[selectedTopic].description}</p>
-            <code>{EXAMPLES[selectedTopic].code}</code>
-          </div>}
+          {tabContent}
         </section>
       </main>
     </>
