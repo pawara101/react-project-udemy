@@ -15,7 +15,7 @@ function App() {
   const [selectedTopic, setSelectedTopic] = useState();
 
 
-  const name: string = "Pawara"
+  const name: string = "Pawara";
 
   //button click function
   const handleSelect = (selectedButton: string): void => {
@@ -44,17 +44,18 @@ function App() {
         <section id='core-concepts'>
           <h2>Core Concepts</h2>
           <ul>
-            <CoreConcept desc={''} {...CORE_CONCEPTS[0]} />
+            <CoreConcept desc={''} {... CORE_CONCEPTS[0]} />
+            <CoreConcept desc={''} {... CORE_CONCEPTS[1]} />
+            <CoreConcept desc={''} {... CORE_CONCEPTS[2]} />
+            <CoreConcept desc={''} {... CORE_CONCEPTS[3]} />
           </ul>
         </section>
         <section id='examples'>
-          <h2>Examples</h2>
-          <menu>
-            <TabButtons onSelect={() => handleSelect("components")}>Components</TabButtons><br /><br />
-            <TabButtons onSelect={() => handleSelect("jsx")}>JSX</TabButtons><br /><br />
-            <TabButtons onSelect={() => handleSelect("props")}>Props</TabButtons><br /><br />
-            <TabButtons onSelect={() => handleSelect("state")}>State</TabButtons><br /><br />
-          </menu>
+          <h2 id='exp'>Examples</h2>
+            <TabButtons isSelected={selectedTopic === 'components'} onSelect={() => handleSelect("components")}>Components</TabButtons>
+            <TabButtons isSelected={selectedTopic === 'jsx'} onSelect={() => handleSelect("jsx")}>JSX</TabButtons>
+            <TabButtons isSelected={selectedTopic === 'props'} onSelect={() => handleSelect("props")}>Props</TabButtons>
+            <TabButtons isSelected={selectedTopic === 'state'} onSelect={() => handleSelect("state")}>State</TabButtons>
           {tabContent}
         </section>
       </main>

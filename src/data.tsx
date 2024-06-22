@@ -1,4 +1,4 @@
-import componentsImg from './assets/7423887_react_react native_icon.png';
+import componentsImg from './assets/073f3e81b44408525233eec8a5848595.png';
 import propsImg from './assets/7423887_react_react native_icon.png';
 import jsxImg from './assets/7423887_react_react native_icon.png';
 import stateImg from './assets/7423887_react_react native_icon.png';

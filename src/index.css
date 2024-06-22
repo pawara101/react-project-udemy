@@ -68,27 +68,10 @@ button:focus-visible {
 }
 
 #core-concepts {
-  padding: 2rem;
-  border-radius: 6px;
-  background-color: #1a1a1a;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+
 }
 
-#tab-button button{
-  background-color: #04AA6D; /* Green background */
-  border: 1px solid green; /* Green border */
-  color: white; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
+.active{
+  background-color: #9f90e2;
 }
 
-#tab-button button:not(:last-child){
-  border-right: none;
-}
-
-#tab-button:after {
-  content: "";
-  clear: both;
-  display: table;
-}

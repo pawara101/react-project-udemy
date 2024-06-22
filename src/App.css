@@ -127,3 +127,17 @@ button {
 button:hover {
   background: #6c1fd6;
 } */
+#examples{
+  background: rgb(64, 38, 124);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.tab-button{
+  display: grid; 
+  gap: 10px; 
+  padding: 15px 32px;
+  float: left;
+}

@@ -12,4 +12,4 @@ export default function CoreConcept(props : CoreConceptProps){
         <p>{props.desc}</p>
       </li>
     )
-  };
+  }
