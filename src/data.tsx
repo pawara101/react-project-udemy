@@ -4,12 +4,12 @@ import jsxImg from './assets/7423887_react_react native_icon.png';
 import stateImg from './assets/7423887_react_react native_icon.png';
 
 export const CORE_CONCEPTS = [
-    {
-        image: componentsImg,
-        title: 'Components',
-        description:
-          'The core UI building block - compose the user interface by combining multiple components.',
-      },
+    // {
+    //     image: componentsImg,
+    //     title: 'Components',
+    //     description:
+    //       'The core UI building block - compose the user interface by combining multiple components.',
+    //   },
       {
         image: jsxImg,
         title: 'JSX',

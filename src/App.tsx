@@ -39,15 +39,13 @@ function App() {
   return (
     <>
       <h1>hello {name} !!!</h1>
-      <Header></Header>
       <main>
         <section id='core-concepts'>
           <h2>Core Concepts</h2>
           <ul>
-            <CoreConcept desc={''} {... CORE_CONCEPTS[0]} />
-            <CoreConcept desc={''} {... CORE_CONCEPTS[1]} />
-            <CoreConcept desc={''} {... CORE_CONCEPTS[2]} />
-            <CoreConcept desc={''} {... CORE_CONCEPTS[3]} />
+              {CORE_CONCEPTS.map((item) => (
+                  <CoreConcept key={item.title} {...item} />
+              ))}
           </ul>
         </section>
         <section id='examples'>
